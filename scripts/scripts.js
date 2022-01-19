@@ -1,13 +1,18 @@
+import keys from '/scripts/API.js';
+console.log(keys)
+// --------keys and fetches-----------------------------
+
 let logMapData = (mapData) => {
     console.log(mapData);
     return mapData;
 }
 // ---------------fetch----------------
 function getMapData() {
-    const latLng = fetch (`https://maps.googleapis.com/maps/api/geocode/json?address=springfield&key=AIzaSyCpxk5yKoAcrMtrTsda23tLvqIZ4RAJCZk`)
+    console.log(keys.keys.mapsKey)
+    const latLng = fetch (`https://maps.googleapis.com/maps/api/geocode/json?address=houston&key=${keys.keys.mapsKey}`)
     .then(response => response.json())
-    // .then(logMapData)
     .then(latData => {
+        console.log(latData);
         let lat = latData.results[0].geometry.location.lat;
         let lng = latData.results[0].geometry.location.lng;
         console.log(lat);
@@ -16,12 +21,12 @@ function getMapData() {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
-                "x-rapidapi-key": "bd2e131b9emsha100eaec64a2cb4p19490bjsn49d7ca4a90a4"
+                "x-rapidapi-key": `${keys.keys.trailsKey}`
             }
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data, latData, latLng)
+            console.log(data)
         })
     })
 }
