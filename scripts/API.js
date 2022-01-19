@@ -1,7 +1,7 @@
+let keys = {    
+    mapsKey : `AIzaSyCpxk5yKoAcrMtrTsda23tLvqIZ4RAJCZk`,
+    trailsKey : `bd2e131b9emsha100eaec64a2cb4p19490bjsn49d7ca4a90a4`
+  }
 
-module.exports = {    
-    "goodKey": "your developer key",    
-    "goodSecret": "secrete",    
-    "goodUserID": 12345
-  }let mapsKey = `AIzaSyCpxk5yKoAcrMtrTsda23tLvqIZ4RAJCZk`;
-let trailsKey = `BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA`;
+export default {keys}
+
