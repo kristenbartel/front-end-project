@@ -1,6 +1,6 @@
 import keys from '/scripts/API.js';
-console.log(keys)
 // --------keys and fetches-----------------------------
+
 
 let logMapData = (mapData) => {
     console.log(mapData);
