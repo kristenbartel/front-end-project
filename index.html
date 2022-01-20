@@ -8,15 +8,54 @@
     <title>MTB app: name</title>
   </head>
   <body>
-    <div class="header" id="header">header</div>
+<!-- nav bar and header -->
+    <nav id="header" class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="image-assets/mtb-icon.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            MTB Trails
+          </a>
+        </div>
+      </nav>
 
-    <div>
-        <input type="text" class="userInput" id="userInput">
-        <button class="searchButton" id="searchButton">search</button>
-    </div>
+<!-- current search field -->
+<div class="input-group">
+    <input id="userInput" value="" type="text" class="form-control" placeholder="Enter City" aria-label="Search" aria-describedby="search-addon" />
+    <button id="searchButton" type="button" class="btn btn-info">Search</button>
+  </div>
 
+<!-- bootstrap carousel -->
+    <div id="carousel" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image-assets/car-1.jpg" class="d-block w-100" alt="...">
+          </div>
+        <!-- replace photo here for one with same sizing -->
+          <div class="carousel-item">
+            <img src="image-assets/car-3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="image-assets/car-4.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="image-assets/car-5.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+
+<!-- search results -->
     <div class="searchResults" id="searchResults">search results</div>
+    <!-- cards -->
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
 
+<!-- footer -->
     <div class="footer" id="footer">footer</div>
 
     <script type="module" src="/scripts/scripts.js"></script>

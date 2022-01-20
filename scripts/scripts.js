@@ -39,3 +39,6 @@ let userInput = document.getElementsById('userInput');
 let searchButton = document.getElementById('searchButton');
 let searchResults = document.getElementById('searchResults');
 let footer = document.getElementsById('footer');
+
+
+
