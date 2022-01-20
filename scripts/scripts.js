@@ -51,11 +51,11 @@ searchButton.addEventListener('click', (e) =>{
     fetch (`https://maps.googleapis.com/maps/api/geocode/json?address=${inputText}&key=${keys.keys.mapsKey}`)
     .then(response => response.json())
     .then(latData => {
-        console.log(latData);
+        // console.log(latData);
         let lat = latData.results[0].geometry.location.lat;
         let lng = latData.results[0].geometry.location.lng;
-        console.log(lat);
-        console.log(lng);
+        // console.log(lat);
+        // console.log(lng);
         return fetch(`https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=${lat}&lon=${lng}`, {
             "method": "GET",
             "headers": {
@@ -65,11 +65,25 @@ searchButton.addEventListener('click', (e) =>{
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            console.log(data.data);
+            const html = data.data.map(array =>{
+                return `
+                <div class='parkInfo'
+                <p>Name: ${array.name}</p>
+                <p>City: ${array.city}</p>
+                <p>Difficulty: ${array.difficulty}</p>
+                <p>Length: ${array.length} Miles</p>
+                <p>Rating: ${array.rating}</p>
+                </div>
+                `
+            }).join('');
+            console.log(html)
+            document.querySelector('#searchResults').insertAdjacentHTML('afterbegin', html);
             
-            inputText = "";
         })
     })
     
 });
+
+
 
