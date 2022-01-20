@@ -74,10 +74,11 @@ searchButton.addEventListener('click', (e) =>{
                 <p>Difficulty: ${array.difficulty}</p>
                 <p>Length: ${array.length} Miles</p>
                 <p>Rating: ${array.rating}</p>
+                <p>Link: ${array.url}</p>
                 </div>
                 `
             }).join('');
-            console.log(html)
+            // console.log(html)
             document.querySelector('#searchResults').insertAdjacentHTML('afterbegin', html);
             
         })
