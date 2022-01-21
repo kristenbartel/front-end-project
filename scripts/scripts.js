@@ -3,13 +3,7 @@ import keys from '/scripts/API.js';
 
 
 // --------keys and fetches-----------------------------
-// ---------DOM declarations and bindings----------------
 
-let header = document.getElementsById('header');
-let userInput = document.getElementsById('userInput');
-let searchButton = document.getElementById('searchButton');
-let searchResults = document.getElementById('searchResults');
-let footer = document.getElementsById('footer');
 
 let logMapData = (mapData) => {
     console.log(mapData);
@@ -53,7 +47,7 @@ let footer = document.getElementById('footer');
 
 
 
-// Event listner for 'searchButton'
+// Event listener for 'searchButton'
 
 searchButton.addEventListener('click', (e) =>{
     e.preventDefault();
@@ -64,8 +58,6 @@ searchButton.addEventListener('click', (e) =>{
         // console.log(latData);
         let lat = latData.results[0].geometry.location.lat;
         let lng = latData.results[0].geometry.location.lng;
-        // console.log(lat);
-        // console.log(lng);
         return fetch(`https://trailapi-trailapi.p.rapidapi.com/trails/explore/?lat=${lat}&lon=${lng}`, {
             "method": "GET",
             "headers": {
@@ -76,24 +68,22 @@ searchButton.addEventListener('click', (e) =>{
         .then(response => response.json())
         .then(data => {
             console.log(data.data);
-            const html = data.data.map(array =>{
-                return `
-                <div class='parkInfo'
-                <p>Name: ${array.name}</p>
-                <p>City: ${array.city}</p>
-                <p>Difficulty: ${array.difficulty}</p>
-                <p>Length: ${array.length} Miles</p>
-                <p>Rating: ${array.rating}</p>
-                <p>Link: ${array.url}</p>
+            let html = data.data.map(array =>{
+                return `<div class="card">
+                <img src="${array.thumbnail}" class="card-img-top" alt="trail image">
+                <div class="card-body">
+                  <h5 class="card-title">${array.name}</h5>
+                  <p>City: ${array.city}</p>
+                  <p class="difficulty">Difficulty: ${array.difficulty}</p>
+                  <p class="length">Length: ${array.length} Miles</p>
+                  <p class="rating">Rating: ${array.rating}</p>
+                  <a href="${array.url}" class="btn btn-primary">Trail Details</a>
                 </div>
-                `
-            
+              </div>`
             }).join('');
-            // console.log(html)
             document.querySelector('#searchResults').insertAdjacentHTML('afterbegin', html);
             userInput.value = '';
         })
-       
     })
 })
 
