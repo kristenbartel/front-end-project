@@ -1,4 +1,12 @@
-/* input styling https://bbbootstrap.com/snippets/search-input-box-32044867*/
+#header {
+    /* this needs styling */
+    display: flex;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    height: 20%
+}
+
 
 /* carousel */
 .carousel {
@@ -30,3 +38,12 @@
     border-radius: 0;
 }
 
+/* footer */
+
+.footer {
+    display: flex;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    height: 20%
+}
