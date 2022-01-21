@@ -1,4 +1,7 @@
 import keys from '/scripts/API.js';
+
+
+
 // --------keys and fetches-----------------------------
 
 
@@ -37,7 +40,7 @@ let logMapData = (mapData) => {
 
 const header = document.getElementById('header');
 let userInput = document.getElementById('userInput');
-let inputText = userInput.value
+// let inputText = userInput.value
 let searchButton = document.getElementById('searchButton');
 let searchResults = document.getElementById('searchResults');
 let footer = document.getElementById('footer');
@@ -48,6 +51,7 @@ let footer = document.getElementById('footer');
 
 searchButton.addEventListener('click', (e) =>{
     e.preventDefault();
+    let inputText = userInput.value
     fetch (`https://maps.googleapis.com/maps/api/geocode/json?address=${inputText}&key=${keys.keys.mapsKey}`)
     .then(response => response.json())
     .then(latData => {
@@ -77,13 +81,15 @@ searchButton.addEventListener('click', (e) =>{
                 <p>Link: ${array.url}</p>
                 </div>
                 `
+            
             }).join('');
             // console.log(html)
             document.querySelector('#searchResults').insertAdjacentHTML('afterbegin', html);
-            
+            userInput.value = '';
         })
+       
     })
-    
+    // userInput.value = '';
 });
 
 
