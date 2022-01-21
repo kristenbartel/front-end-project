@@ -3,7 +3,13 @@ import keys from '/scripts/API.js';
 
 
 // --------keys and fetches-----------------------------
+// ---------DOM declarations and bindings----------------
 
+let header = document.getElementsById('header');
+let userInput = document.getElementsById('userInput');
+let searchButton = document.getElementById('searchButton');
+let searchResults = document.getElementById('searchResults');
+let footer = document.getElementsById('footer');
 
 let logMapData = (mapData) => {
     console.log(mapData);
@@ -89,8 +95,7 @@ searchButton.addEventListener('click', (e) =>{
         })
        
     })
-    // userInput.value = '';
-});
+})
 
 
 
