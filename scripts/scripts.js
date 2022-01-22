@@ -1,17 +1,13 @@
 import keys from '/scripts/API.js';
 
-// ---------DOM declarations and bindings----------------
-
-let header = document.getElementById('header');
+// ---------DOM declarations----------------
 let userInput = document.getElementById('userInput');
-// let inputText = userInput.value
 let searchButton = document.getElementById('searchButton');
 let searchResults = document.getElementById('searchResults');
-let footer = document.getElementById('footer');
 let spinnerContainer = document.getElementById('spinner-container');
+// let mapsContainer = document.getElementById('maps-container');
 
-
-// Event listner for 'searchButton'
+// Event listener for 'searchButton'
 
 searchButton.addEventListener('click', (e) =>{
     e.preventDefault();
@@ -53,6 +49,7 @@ searchButton.addEventListener('click', (e) =>{
                   <p class="length">Length: ${trailData.length} Miles</p>
                   <p class="rating">Rating: ${trailData.rating}</p>
                   <a href="${trailData.url}" class="btn btn-info">Details</a>
+                  <button id="mapsButton" value="${trailData.lat},${trailData.lon}">maps</button>
                 </div>
               </div>`
             }).join();
@@ -60,14 +57,36 @@ searchButton.addEventListener('click', (e) =>{
             userInput.value = '';
             spinnerContainer.style.display = "none"
             location.href = '#searchResults'
+
+
+            let mapsButton = document.getElementById('mapsButton');
+            console.log(mapsButton, 60);
+            mapsButton.addEventListener('click', (e) => {
+                console.log(mapsButton.value);
+                let iframe = `
+                <iframe style="border:0"
+                loading="lazy"
+                            allowfullscreen
+                            src='https://www.google.com/maps/embed/v1/view?key=${keys.keys.mapsKey}&center=${mapsButton.value}
+                            &zoom=18
+                            &maptype=satellite'>
+                            </iframe>`
+
+                            console.log(iframe, 75)
+                return iframe
+            })
+            document.querySelector('#maps-container').insertAdjacentHTML('afterbegin', iframe);
         })
+        
     })
+    
 })
 
 
-
-
-
-
-
-
+// mapsButton.addEventListener('click', (e) => {
+//     
+// } )
+// run a fetch based on the mapsButton value
+// 
+// 
+// }
