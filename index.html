@@ -20,15 +20,20 @@
       </nav>
 
 <!--search field -->
-<!-- <a href="#searchResults"> -->
 <div class="input-group" id="input-group">
     <input id="userInput" value="" type="text" class="form-control" placeholder="Enter City" aria-label="Search" aria-describedby="search-addon"/>
-        <button id="searchButton" type="button" class="btn btn-info">
+        <button id="searchButton" href="#searchResult" type="button" class="btn btn-info">
             <i class="fas fa-search white"></i>
         </button>
 </div>
-<!-- </a> -->
-
+<!--Bootstrap spinner-->
+<div class="spinner-container" id="spinner-container">
+<div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+</div>
 <!-- carousel -->
     <div id="carousel" class="carousel" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -46,14 +51,14 @@
           </div>
         </div>
       </div>
+
 <!-- sample maps -->
-<!-- DOM object and  -->
     <div class="map-container" id="map=container">
         <iframe
         style="border:0"
         loading="lazy"
         allowfullscreen
-        src='https://www.google.com/maps/embed/v1/view?key=AIzaSyCpxk5yKoAcrMtrTsda23tLvqIZ4RAJCZk&center=-33.8569,151.2152
+        src='https://www.google.com/maps/embed/v1/view?key=YOURKEYHERE&center=-33.8569,151.2152
         &zoom=18
         &maptype=satellite'>
         </iframe>
@@ -61,12 +66,9 @@
 <!-- DOM created -->
 <!-- cards -->
 <div class="row row-cols-sm-1 row-cols-md-4 row-cols-lg-5 searchResults" id="searchResults"></div>
-
-
 <!-- footer -->
     <div class="footer" id="footer">Shred Lightly</div>
-
-    <script type="module" src="/scripts/scripts.js"></script>
+     <script type="module" src="/scripts/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
