@@ -5,7 +5,7 @@ let userInput = document.getElementById('userInput');
 let searchButton = document.getElementById('searchButton');
 let searchResults = document.getElementById('searchResults');
 let spinnerContainer = document.getElementById('spinner-container');
-// let mapsContainer = document.getElementById('maps-container');
+let mapsContainer = document.getElementById('maps-container');
 
 // Event listener for 'searchButton'
 
@@ -59,34 +59,27 @@ searchButton.addEventListener('click', (e) =>{
             location.href = '#searchResults'
 
 
-            let mapsButton = document.getElementById('mapsButton');
+            let mapsButton = document.querySelectorAll('#mapsButton');
             console.log(mapsButton, 60);
-            mapsButton.addEventListener('click', (e) => {
-                console.log(mapsButton.value);
-                let iframe = `
-                <iframe style="border:0"
-                loading="lazy"
-                            allowfullscreen
-                            src='https://www.google.com/maps/embed/v1/view?key=${keys.keys.mapsKey}&center=${mapsButton.value}
-                            &zoom=18
-                            &maptype=satellite'>
-                            </iframe>`
 
-                            console.log(iframe, 75)
-                return iframe
+            mapsButton.forEach(mapsButton => {
+                mapsButton.addEventListener('click', (e) => {
+                    console.log(mapsButton.value);
+                    mapsContainer = document.querySelector('#map-container')
+                    mapsContainer.innerHTML = ''
+                    let iframe = `
+                    <iframe style="border:0"
+                    loading="lazy"
+                                allowfullscreen
+                                src='https://www.google.com/maps/embed/v1/view?key=${keys.keys.mapsKey}&center=${mapsButton.value}
+                                &zoom=18
+                                &maptype=satellite'>
+                                </iframe>`
+                                console.log(iframe, 75);
+                                mapsContainer.innerHTML = iframe;
+                                location.href = '#map-container';
             })
-            document.querySelector('#maps-container').insertAdjacentHTML('afterbegin', iframe);
+            })
         })
-        
     })
-    
 })
-
-
-// mapsButton.addEventListener('click', (e) => {
-//     
-// } )
-// run a fetch based on the mapsButton value
-// 
-// 
-// }
