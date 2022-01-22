@@ -5,11 +5,11 @@ import keys from '/scripts/API.js';
 // --------keys and fetches-----------------------------
 // ---------DOM declarations and bindings----------------
 
-let header = document.getElementsById('header');
-let userInput = document.getElementsById('userInput');
-let searchButton = document.getElementById('searchButton');
-let searchResults = document.getElementById('searchResults');
-let footer = document.getElementsById('footer');
+// let header = document.getElementsById('header');
+// let userInput = document.getElementsById('userInput');
+// let searchButton = document.getElementById('searchButton');
+// let searchResults = document.getElementById('searchResults');
+// let footer = document.getElementsById('footer');
 
 let logMapData = (mapData) => {
     console.log(mapData);
@@ -44,12 +44,14 @@ let logMapData = (mapData) => {
 
 // ---------DOM declarations and bindings----------------
 
-const header = document.getElementById('header');
+let header = document.getElementById('header');
 let userInput = document.getElementById('userInput');
 // let inputText = userInput.value
 let searchButton = document.getElementById('searchButton');
 let searchResults = document.getElementById('searchResults');
 let footer = document.getElementById('footer');
+
+
 
 
 
@@ -86,6 +88,7 @@ searchButton.addEventListener('click', (e) =>{
                 <p>Rating: ${array.rating}</p>
                 <p>Link: ${array.url}</p>
                 </div>
+                </a>
                 `
             
             }).join('');
@@ -97,5 +100,8 @@ searchButton.addEventListener('click', (e) =>{
     })
 })
 
+// searchButton.addEventListener("click", (e)=>{
+//     `<a href=#`
+// })
 
 
