@@ -10,21 +10,24 @@
   </head>
   <body>
 <!-- nav bar and header -->
-    <nav id="header" class="navbar navbar-light bg-blk">
+    <nav id="header" class="">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="image-assets/mtb-icon.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-            MTB Trails
+          <a class="navbar-brand" href="#carousel">
+            <img src="image-assets/mtb-icon.jpg" alt="" width="40" height="40" class="d-inline-block align-text-top">
+            Shred Lightly
           </a>
         </div>
       </nav>
 
 <!--search field -->
-<div class="input-group">
-    <input id="userInput" value="" type="text" class="form-control" placeholder="Enter City" aria-label="Search" aria-describedby="search-addon" />
-    <button id="searchButton" type="button" class="btn btn-info">
-        <i class="fas fa-search"></i></button>
-  </div>
+<!-- <a href="#searchResults"> -->
+<div class="input-group" id="input-group">
+    <input id="userInput" value="" type="text" class="form-control" placeholder="Enter City" aria-label="Search" aria-describedby="search-addon"/>
+        <button id="searchButton" href="#searchResult" type="button" class="btn btn-info">
+            <i class="fas fa-search white"></i>
+        </button>
+</div>
+<!-- </a> -->
 
 <!-- carousel -->
     <div id="carousel" class="carousel" data-bs-ride="carousel">
@@ -44,23 +47,23 @@
         </div>
       </div>
 <!-- sample maps -->
-<!-- <div class="map-container" id="map=container"> -->
-    <iframe
-    style="border:0"
-    loading="lazy"
-    allowfullscreen
-    src='https://www.google.com/maps/embed/v1/view?key=AIzaSyCpxk5yKoAcrMtrTsda23tLvqIZ4RAJCZk&center=-33.8569,151.2152
-    &zoom=18
-    &maptype=satellite'>
-</iframe>
-<!-- </div> -->
+    <div class="map-container" id="map=container">
+        <iframe
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        src='https://www.google.com/maps/embed/v1/view?key=YOURKEYHERE&center=-33.8569,151.2152
+        &zoom=18
+        &maptype=satellite'>
+        </iframe>
+        </div>
 <!-- DOM created -->
 <!-- cards -->
-<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 searchResults" id="searchResults"></div>
+<div class="row row-cols-sm-1 row-cols-md-4 row-cols-lg-5 searchResults" id="searchResults"></div>
 
 
 <!-- footer -->
-    <div class="footer" id="footer">footer</div>
+    <div class="footer" id="footer">Shred Lightly</div>
 
     <script type="module" src="/scripts/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
