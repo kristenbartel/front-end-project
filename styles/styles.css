@@ -1,12 +1,14 @@
 #header {
-    /* this needs styling */
-    display: flex;
-    color: white;
+    display: block;
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0;
     background-color: black;
     padding: 20px;
-    height: 20%
+    height: 10%;
+    z-index: 3;
+    align-content: left;
 }
-
 
 /* carousel */
 .carousel {
@@ -15,6 +17,7 @@
     text-align: center; */
 }
 
+/* user input and button */
 .input-group {
     display: flex;
     position: absolute;
@@ -26,7 +29,6 @@
 }
 
 .form-control {
-    
     padding: 2%;
     z-index: 1;
     border: none;
@@ -36,14 +38,77 @@
     border: none;
     color: white;
     border-radius: 0;
+    width: 5em;
 }
 
+/* map */
+.map-container {
+    display: flex;
+    width: 100vw;
+    max-height: 300px;
+    padding: 2em;
+}
+iframe {
+    width: 96vw;
+    min-height: 30vh;
+    max-height: 50vh;
+    margin: 1em;
+}
+
+/* cards */
+.searchResults {
+    display:flex;
+    justify-content: center;
+    background-color: black;
+    margin: 0;
+}
+.card{
+    margin: 1em;
+    border: none;
+    border-radius: 0;
+}
+.card-body{
+    
+}
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+    margin-top: 1em;
+    
+}
 /* footer */
 
 .footer {
     display: flex;
+    position: -webkit-sticky;
+    position: sticky;
     color: white;
     background-color: black;
     padding: 20px;
     height: 20%
 }
+
+/* styling for media queries */
+.card-img-top {
+    /* restrict the image size/bounds */
+}
+
+@media only screen and (max-width: 767px) {
+    /* adjust all sizes and placements here*/
+    .searchResults{
+        background-color: black;
+        
+
+        /* taking out rounded corners */
+    }
+    .card {
+        border-radius: 0;
+        margin: 5px;
+        padding: 5px;
+    }
+    .btn {
+
+    }
+}
+
