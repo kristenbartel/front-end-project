@@ -45,7 +45,7 @@
 .map-container {
     display: flex;
     width: 100vw;
-    max-height: 300px;
+    /* max-height: 300px; */
     padding: 2em;
 }
 iframe {
@@ -59,16 +59,52 @@ iframe {
 .searchResults {
     display:flex;
     justify-content: center;
-    background-color: black;
+    background-color: white;
     margin: 0;
 }
 .card{
     margin: 1em;
     border: none;
     border-radius: 0;
+    box-shadow: 0px 4px 10px grey;
+    transition: all 300ms ease-in-out;
 }
-.card-body{
+
+.card:hover{
+    box-shadow:0px 20px 50px;
     
+
+}
+
+p {
+position: relative;
+text-decoration:none;
+font-family: 'Poppins', sans-serif;
+color: black;
+font-size: 14px;
+letter-spacing: 0.5px;
+padding: 0 10px;
+}
+
+p:after{
+    content:"";
+    position: absolute;
+    background-color: black;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+p:hover:after{
+    width: 100%;
+}
+
+
+
+.card-body{
+   
 }
 .card-img-top {
     width: 100%;
@@ -106,6 +142,7 @@ iframe {
         border-radius: 0;
         margin: 5px;
         padding: 5px;
+        
     }
     .btn {
 

@@ -7,9 +7,12 @@ let searchResults = document.getElementById('searchResults');
 let spinnerContainer = document.getElementById('spinner-container');
 let mapsContainer = document.getElementById('maps-container');
 
+
 // Event listener for 'searchButton'
 
-searchButton.addEventListener('click', (e) =>{
+
+
+    searchButton.addEventListener('click', (e) =>{
     e.preventDefault();
     
     spinnerContainer.style.display = "block"
@@ -42,7 +45,7 @@ searchButton.addEventListener('click', (e) =>{
                 };
                 return `<div class="card" id="searchResults">
                 <img src="${trailData.thumbnail}" class="card-img-top" alt="trail image">
-                <div class="card-body">
+                <div class="card-body" >
                   <h5 class="card-title">${trailData.name}</h5>
                   <p>City: ${trailData.city}</p>
                   <p class="difficulty">Difficulty: ${trailData.difficulty}</p>
@@ -52,9 +55,10 @@ searchButton.addEventListener('click', (e) =>{
                   <button id="mapsButton" value="${trailData.lat},${trailData.lon}">maps</button>
                 </div>
               </div>`
-            }).join();
+            }).join('');
             document.querySelector('#searchResults').insertAdjacentHTML('afterbegin', html);
             userInput.value = '';
+            
             spinnerContainer.style.display = "none"
             location.href = '#searchResults'
 
@@ -82,4 +86,8 @@ searchButton.addEventListener('click', (e) =>{
             })
         })
     })
-})
+});
+
+
+
+
