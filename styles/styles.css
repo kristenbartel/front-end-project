@@ -1,20 +1,50 @@
-#header {
-    display: block;
+.header {
+    display: flex;
     position:-webkit-sticky;
     position: sticky;
     top: 0;
     background-color: black;
-    padding: 20px;
-    height: 10%;
     z-index: 3;
-    align-content: left;
+    justify-content: space-between;
+    
+}
+.nav-bar-menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-start;
+}
+.nav-bar-item {
+    padding: 2rem;
+}
+                /* 
+                
+                */
+.nav-bar-item-shred {
+    font-size: 30pt;
+    padding: 1rem;
+    /* font-family: 'Cantarell', sans-serif; */
+    /* font-family: 'Dongle', sans-serif; */
+    /* font-family: 'Genos', sans-serif; */
+    /* font-family: 'Lobster', cursive; */
+    /* font-family: 'Monoton', cursive; */
+    /* font-family: 'Montserrat Alternates', sans-serif; */
+    /* font-family: 'Parisienne', cursive; */
+    font-family: 'Permanent Marker', cursive;
+    /* font-family: 'Righteous', cursive; */
+    /* font-family: 'Syncopate', sans-serif;  */
 }
 
+a:hover {
+    color: #5bc0de;
+  }
+  
+a{
+    text-decoration: none;
+    color: white;
+}
 /* carousel */
 .carousel {
     display: flex;
-    /* width: 100%;
-    text-align: center; */
 }
 
 /* user input and button */
@@ -34,19 +64,22 @@
     border: none;
     border-radius: 0;
 }
-.btn {
+.btn-info {
     border: none;
     color: white;
     border-radius: 0;
     width: 5em;
+    /* margin-left: 1em;
+    margin-bottom: 1em; */
 }
 
 /* map */
 .map-container {
     display: flex;
     width: 100vw;
-    max-height: 300px;
+    /* max-height: 30vh; */
     padding: 2em;
+    background-color: white;
 }
 iframe {
     width: 96vw;
@@ -59,7 +92,7 @@ iframe {
 .searchResults {
     display:flex;
     justify-content: center;
-    background-color: black;
+    background-color: rgba(253, 252, 252, 0.441);
     margin: 0;
 }
 .card{
@@ -77,16 +110,25 @@ iframe {
     margin-top: 1em;
     
 }
+
+.details-button {
+    margin-bottom: 1em;
+}
+.maps-button {
+    margin-bottom: 1em;
+}
 /* footer */
 
 .footer {
     display: flex;
     position: -webkit-sticky;
     position: sticky;
+    bottom: 0;
     color: white;
     background-color: black;
-    padding: 20px;
-    height: 20%
+    padding: 10px;
+    height: 20%;
+    bottom: 0;
 }
 
 /* styling for media queries */
@@ -128,4 +170,7 @@ iframe {
 
 .spinner-container {
     display: none;
+}
+.footer{
+    bottom: 0;
 }

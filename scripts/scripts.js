@@ -7,11 +7,39 @@ let searchResults = document.getElementById('searchResults');
 let spinnerContainer = document.getElementById('spinner-container');
 let mapsContainer = document.getElementById('maps-container');
 
-// Event listener for 'searchButton'
+// attempts getting API out og html
+// below: used in import/export file.js
+// import API from "./API";
+// export default `https://maps.googleapis.com/maps/api/js?key=${API.keys.mapsKey}&libraries=places`;
 
-searchButton.addEventListener('click', (e) =>{
+
+// fetch (`https://maps.googleapis.com/maps/api/js?key=${keys.keys.mapsKey}&libraries=places`, { mode: 'no-cors'})
+// .then (response => response.json())
+// .then (initialize())
+function initialize() {
+  var options = {
+    types: ['(cities)'],
+    componentRestrictions: {
+      country: "us"
+    }
+  };
+
+  var input = document.getElementById('userInput');
+  var autocomplete = new google.maps.places.Autocomplete(input, options);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+initialize();
+
+
+// event listeners for button click
+  searchButton.addEventListener('click', (e) =>{
     e.preventDefault();
-    
+      runSearch();
+})
+
+// program
+
+function runSearch () {
     spinnerContainer.style.display = "block"
 
     let inputText = userInput.value
@@ -29,7 +57,7 @@ searchButton.addEventListener('click', (e) =>{
         })
         .then(response => response.json())
         .then(data => {
-            // console.log(data.data);
+            console.log(data.data);
             let html = data.data.map(trailData => {
                 while (searchResults.firstChild) {
                     searchResults.removeChild(searchResults.firstChild);
@@ -37,19 +65,25 @@ searchButton.addEventListener('click', (e) =>{
                 if (trailData.thumbnail === null) {
                     trailData.thumbnail = "image-assets/car-2.jpg";
                 };
+                if (trailData.rating === 0) {
+                    trailData.rating = 'no rating';
+                }
                 if (trailData.difficulty === '') {
-                    trailData.difficulty = 'no data found';
+                    trailData.difficulty = 'unknown';
                 };
+                if (trailData.length === '0.0') {
+                    trailData.length = 'unknown'
+                }
                 return `<div class="card" id="searchResults">
                 <img src="${trailData.thumbnail}" class="card-img-top" alt="trail image">
                 <div class="card-body">
                   <h5 class="card-title">${trailData.name}</h5>
                   <p>City: ${trailData.city}</p>
                   <p class="difficulty">Difficulty: ${trailData.difficulty}</p>
-                  <p class="length">Length: ${trailData.length} Miles</p>
+                  <p class="length">Length: ${trailData.length} miles</p>
                   <p class="rating">Rating: ${trailData.rating}</p>
-                  <a href="${trailData.url}" class="btn btn-info">Details</a>
-                  <button id="mapsButton" value="${trailData.lat},${trailData.lon}">maps</button>
+                  <a href="${trailData.url}" class="details-button btn btn-info">Details</a>
+                  <button id="mapsButton" class="maps-button btn btn-info" value="${trailData.lat},${trailData.lon}">Maps</button>
                 </div>
               </div>`
             }).join();
@@ -57,7 +91,6 @@ searchButton.addEventListener('click', (e) =>{
             userInput.value = '';
             spinnerContainer.style.display = "none"
             location.href = '#searchResults'
-
 
             let mapsButton = document.querySelectorAll('#mapsButton');
             console.log(mapsButton, 60);
@@ -82,4 +115,4 @@ searchButton.addEventListener('click', (e) =>{
             })
         })
     })
-})
+}
