@@ -37,6 +37,14 @@ initialize();
       runSearch();
 })
 
+// userInput.addEventListener('keydown', (e) => {
+//     e.preventDefault();
+//     if (e.altKey === 13) {
+//         runSearch();
+//     }
+// })
+
+
 // program
 
 function runSearch () {
@@ -81,12 +89,12 @@ function runSearch () {
                   <p>City: ${trailData.city}</p>
                   <p class="difficulty">Difficulty: ${trailData.difficulty}</p>
                   <p class="length">Length: ${trailData.length} miles</p>
-                  <p class="rating">Rating: ${trailData.rating}</p>
-                  <a href="${trailData.url}" class="details-button btn btn-info">Details</a>
-                  <button id="mapsButton" class="maps-button btn btn-info" value="${trailData.lat},${trailData.lon}">Maps</button>
+                  <p id="rateMe2"  class="empty-stars">Rating: ${trailData.rating}</p>
+                  <a href="${trailData.url}" target="_blank" rel="noopener noreferrer" id="details-button" class="details-button btn btn-info mt-1">Detail</a>
+                  <button id="mapsButton" class="maps-button btn btn-info mt-1" value="${trailData.lat},${trailData.lon}">Map</button>
                 </div>
               </div>`
-            }).join();
+            }).join('');
             document.querySelector('#searchResults').insertAdjacentHTML('afterbegin', html);
             userInput.value = '';
             spinnerContainer.style.display = "none"

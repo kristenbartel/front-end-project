@@ -14,20 +14,15 @@
   </head>
   <body>
 <!-- nav bar and header -->
-    <nav id="header" class="header">
-        <div class="container-fluid">
+        <div class="header container-fluid">
+            <img src="image-assets/shred-lightly-logo.jpg" alt="" class="logo" id="logo">
           <ul class="nav-bar-menu">
-            <img src="image-assets/shred-lightly-logo.jpg" alt="" width="auto" height="80" class="logo d-inline-block align-text-bottom">
-            <li class="nav-bar-item-shred"><a href="#">Shred Lightly</a></li>
-            <li class="nav-bar-item"><a href="#">About Us</a></li>
-            <li class="nav-bar-item"><a href="#">Code</a></li>
+            <li id="nav-bar-item-shred" class="nav-bar-item"><a href="#">Shred Lightly</a></li>
+            <li id="nav-bar-item" class="nav-bar-item"><a href="#">Trail Search</a></li>
+            <li id="nav-bar-item" class="nav-bar-item"><a href="#">About Us</a></li>
+            <li id="nav-bar-item" class="nav-bar-item"><a href="https://github.com/kristenbartel/front-end-project" target="_blank" rel="noopener noreferrer">The Code</a></li>
           </ul>
         </div>
-        <div>
-        </div>
-          
-        
-      </nav>
 <!--search field -->
 <div class="input-group" id="input-group">
         <input id="userInput" value="" type="text" class="form-control" placeholder="Enter City" aria-label="Search" aria-describedby="search-addon"/>
@@ -63,9 +58,11 @@
 <!-- map -->
     <div class="map-container" id="map-container"> </div>
 <!-- cards -->
-    <div class="row row-cols-sm-1 row-cols-md-4 row-cols-lg-5 searchResults" id="searchResults"></div>
+    <div class="row row-cols-sm-1 row-cols-md-3 row-cols-xl-4 searchResults" id="searchResults"></div>
 <!-- footer -->
-    <div class="footer" id="footer">Shred Lightly</div>
+    <div class="footer" id="footer">
+        <i class="fa fa-bicycle" aria-hidden="true"></i>
+    </div>
     <!-- <script scr="/scripts/keys.js"></script> -->
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpxk5yKoAcrMtrTsda23tLvqIZ4RAJCZk&libraries=places"></script>
