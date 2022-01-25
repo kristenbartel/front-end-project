@@ -32,17 +32,19 @@ initialize();
 
 
 // event listeners for button click
-  searchButton.addEventListener('click', (e) =>{
+searchButton.addEventListener('click', (e) => {
     e.preventDefault();
+    console.log('do you see me');
       runSearch();
 })
 
-// userInput.addEventListener('keydown', (e) => {
-//     e.preventDefault();
-//     if (e.altKey === 13) {
-//         runSearch();
-//     }
-// })
+userInput.addEventListener('keyup', (e) => {
+    e.preventDefault();
+    if (e.keyCode === 13) {
+        document.getElementById('searchButton').click()
+        runSearch();
+    }
+})
 
 
 // program
