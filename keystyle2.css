@@ -4,3 +4,31 @@
     width: 200px;
     height: 200px; 
 }
+
+<div class="card" id="">
+<div class="row row-cols-sm-1 row-cols-md-3 row-cols-xl-4">
+    <div class="About-Us-Card" style="width:22rem;">
+        <img class="card-img-top" src="/image-assets/headshot Bartel.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Kristen - Full Stack Developer</h5>
+          <p class="card-text"></p>
+          <p class = "card-text">
+          </p>
+          <a href="https://github.com/EugeneJac3" class="btn btn-primary">Go somewhere</a>
+        </div>
+
+        <div class="About-Us-Card" style="width: 20rem;">
+            <img class="card-img-top" src="/image-assets/eugene.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Eugene - Full Stack Developer</h5>
+              <p class="card-text">Eugene wrote the Dom manipulation, styling and project conceptualize.  His area of interest is JavaScript.
+              <a href="https://github.com/EugeneJac3" class="btn btn-primary">Github</a>
+            </div>
+
+    <div class="About-Us-Card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
