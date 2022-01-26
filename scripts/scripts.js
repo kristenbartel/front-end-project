@@ -13,9 +13,9 @@ let mapsContainer = document.getElementById('maps-container');
 // export default `https://maps.googleapis.com/maps/api/js?key=${API.keys.mapsKey}&libraries=places`;
 
 
-// fetch (`https://maps.googleapis.com/maps/api/js?key=${keys.keys.mapsKey}&libraries=places`, { mode: 'no-cors'})
-// .then (response => response.json())
-// .then (initialize())
+fetch (`https://maps.googleapis.com/maps/api/js?key=${keys.keys.mapsKey}&libraries=places`, { mode: 'no-cors'})
+.then (response => response.json())
+.then (initialize())
 function initialize() {
   var options = {
     types: ['(cities)'],
@@ -23,7 +23,6 @@ function initialize() {
       country: "us"
     }
   };
-
   var input = document.getElementById('userInput');
   var autocomplete = new google.maps.places.Autocomplete(input, options);
 }
