@@ -25,14 +25,9 @@
     display: flex;
     margin-top: 1rem;
     color: white;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
+    
     font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
+   
 }
 a:hover {
     color: #5bc0de;
@@ -124,16 +119,9 @@ iframe {
 }
 h5 {
     font-family: 'Cantarell', sans-serif;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
     font-family: 'Permanent Marker', cursive;
     font-size: x-large;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
-    /* text-align: center; */
+   
 }
 .card-img-top {
     width: 100%;

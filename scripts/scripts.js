@@ -6,6 +6,7 @@ let searchButton = document.getElementById('searchButton');
 let searchResults = document.getElementById('searchResults');
 let spinnerContainer = document.getElementById('spinner-container');
 let mapsContainer = document.getElementById('maps-container');
+// could make a google element and 
 
 // attempts getting API out og html
 // below: used in import/export file.js
@@ -16,6 +17,7 @@ let mapsContainer = document.getElementById('maps-container');
 // fetch (`https://maps.googleapis.com/maps/api/js?key=${keys.keys.mapsKey}&libraries=places`, { mode: 'no-cors'})
 // .then (response => response.json())
 // .then (initialize())
+
 function initialize() {
   var options = {
     types: ['(cities)'],
@@ -26,15 +28,16 @@ function initialize() {
 
   var input = document.getElementById('userInput');
   var autocomplete = new google.maps.places.Autocomplete(input, options);
+//   return `<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpxk5yKoAcrMtrTsda23tLvqIZ4RAJCZk&libraries=places></script>`
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
 initialize();
 
 
 // event listeners for button click
 searchButton.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log('do you see me');
       runSearch();
 })
 
