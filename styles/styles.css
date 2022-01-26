@@ -150,7 +150,6 @@ p:hover:after{
     width: 100%;
 }
 
-   
 .card-body{
     font-family: 'Cantarell', sans-serif;
     /* text-align: center; */
@@ -199,6 +198,7 @@ h5 {
     .card {
         border-radius: 0;
         margin: 15px;
+        margin: 20px;
         padding: 5px;
     }
     .container-fluid {
@@ -216,16 +216,7 @@ h5 {
         display: flex;
         margin-top: 1rem;
         color: white;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Lobster', cursive; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
-    /* font-family: 'Parisienne', cursive; */
-    font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
+        font-family: 'Permanent Marker', cursive;
     }
     #nav-bar-item {
         display: flex;
