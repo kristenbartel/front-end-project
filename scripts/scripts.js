@@ -10,8 +10,6 @@ let mapsContainer = document.getElementById('maps-container');
 
 // Event listener for 'searchButton'
 
-
-
     searchButton.addEventListener('click', (e) =>{
     e.preventDefault();
     
