@@ -86,7 +86,7 @@ function runSearch () {
                 }
                 return `<div class="card" id="searchResults">
                 <img src="${trailData.thumbnail}" class="card-img-top" alt="trail image">
-                <div class="card-body">
+                <div class="card-body" >
                   <h5 class="card-title">${trailData.name}</h5>
                   <p>City: ${trailData.city}</p>
                   <p class="difficulty">Difficulty: ${trailData.difficulty}</p>
@@ -99,6 +99,7 @@ function runSearch () {
             }).join('');
             document.querySelector('#searchResults').insertAdjacentHTML('afterbegin', html);
             userInput.value = '';
+            
             spinnerContainer.style.display = "none"
             location.href = '#searchResults'
 
