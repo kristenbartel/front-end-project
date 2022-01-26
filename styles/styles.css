@@ -123,8 +123,6 @@ iframe {
 
 .card:hover{
     box-shadow:0px 20px 50px;
-    
-
 }
 
 p {
@@ -159,16 +157,8 @@ p:hover:after{
 }
 h5 {
     font-family: 'Cantarell', sans-serif;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
     font-family: 'Permanent Marker', cursive;
     font-size: x-large;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
-    /* text-align: center; */
 }
 .card-img-top {
     width: 100%;
@@ -183,7 +173,6 @@ h5 {
     background-color: #f0ad4e;
     color: white;
 } 
-
 /* --------------footer--------------- */
 .footer {
     display: flex;
@@ -199,7 +188,6 @@ h5 {
     z-index: 3;
     font-family: 'Cantarell', sans-serif;
 }
-
 /* styling for media queries */
 @media only screen and  (max-width: 920px) {
     .btn-info {
@@ -210,9 +198,8 @@ h5 {
     }
     .card {
         border-radius: 0;
-        margin: 5px;
+        margin: 15px;
         padding: 5px;
-        
     }
     .container-fluid {
         display: flex;
@@ -247,7 +234,11 @@ h5 {
         font-size: small;
         font-family: 'Cantarell', sans-serif;
     }
-    #mapsButton {
+    .maps-button{
+        padding: 0;
+    }
+    .details-button {
+        padding: 0;
     }
 }
 @media only screen and  (max-width: 480px) {
@@ -274,7 +265,7 @@ h5 {
     }
     .logo {
         max-height: 50px;
-    margin-top: 20px;
+        margin-top: 20px;
     }
     #nav-bar-item-shred{
         font-size: 1em;
