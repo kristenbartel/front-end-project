@@ -1,15 +1,12 @@
 import keys from '/scripts/API.js';
 
-// ---------DOM declarations----------------
+// ---------DOM declarations-----------
 let userInput = document.getElementById('userInput');
 let searchButton = document.getElementById('searchButton');
 let searchResults = document.getElementById('searchResults');
 let spinnerContainer = document.getElementById('spinner-container');
 let mapsContainer = document.getElementById('maps-container');
-// -------------autoComplete----------------
-fetch (`https://maps.googleapis.com/maps/api/js?key=${keys.keys.mapsKey}&libraries=places`, { mode: 'no-cors'})
-.then (response => response.json())
-.then (initialize())
+
 function initialize() {
   var options = {
     types: ['(cities)'],
@@ -26,7 +23,6 @@ initialize();
 // ------------eventListeners------------
 searchButton.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log('do you see me');
       runSearch();
 })
 
