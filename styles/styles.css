@@ -158,26 +158,19 @@ h1 {
 h5 {
     font-family: 'Permanent Marker', cursive;
 }
-.about-us-container{
-    
-}
 .about-us-title{
     display: flex;
     justify-content: center;
     margin-top: 1em;
     font-size: xx-large
-
-
 }
 .about-us-p{
     display: flex;
     justify-content: center;
-    text-justify: inter-cluster;
     margin-top: 2em;
     margin-bottom: 3em;
     margin-left: 5em;
     margin-right: 5em;
-
 }
 /* --------------footer--------------- */
 .footer {
