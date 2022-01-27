@@ -1,12 +1,12 @@
 import keys from '/scripts/API.js';
 
-// ---------DOM declarations----------------
+// ---------DOM declarations-----------
 let userInput = document.getElementById('userInput');
 let searchButton = document.getElementById('searchButton');
 let searchResults = document.getElementById('searchResults');
 let spinnerContainer = document.getElementById('spinner-container');
 let mapsContainer = document.getElementById('maps-container');
-
+// 
 function initialize() {
   var options = {
     types: ['(cities)'],
