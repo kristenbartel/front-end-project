@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cantarell&family=Cormorant:wght@700&family=Dongle&family=Genos:wght@200&family=Lobster&family=Monoton&family=Montserrat+Alternates:wght@600&family=Parisienne&family=Permanent+Marker&family=Righteous&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">  
     <title>MTB app: name</title>
-    <!-- <script>import keys from '/scripts/API.js';</script> -->
   </head>
   <body>
 <!-- nav bar and header -->
@@ -23,43 +22,45 @@
             <li id="nav-bar-item" class="nav-bar-item"><a href="https://github.com/kristenbartel/front-end-project" target="_blank" rel="noopener noreferrer">The Code</a></li>
           </ul>
         </div>
+<!--about us paragraph -->
+    <div class="about-us-container">
+      <h5 class="about-us-title">helping find your next adventure</h5>
+      <p class="about-us-p">Shred Lightly is a web app that allows users to search mountain bike trails by city. Each user search will query the trailAPI using a 50 mile radius of the city center's latitude and longitude- powered by the Google Maps API. Search results are DOM-rendered using Bootstrap5 Card Groups. Key features within the card allow users to jump to singletracks.com for detailed information and to render maps specific to their trail selection. This map feature is powered by Google Maps Embed API, again using the latitude and longitude of from the user's selection. The Shred Lightly tech-stack includes: javaScript, HTML, CSS and the Bootstrap5 library. Learn more about the dev team below.</p>
+    </div>
 <!-- about us cards -->
-
   <div class="card-group">
     <div class="card">
-      <img src="./image-assets/img_avatar.jpeg" class="card-img-top" alt="...">
+      <img src="/image-assets/headshot Bartel.jpg" class="card-img-top p-2" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Eugene</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h1 class="card-title">Kristen-</h1>
+        <h5>Full Stack Developer</h5>
+        <p class="card-text">Kristen served as project manager in which she managed the git-work-flow, assisted with project conceptualization, researched API viability, built javaScript functionality and features- focusing on UX, and spearheaded the design and styling.</p>
+        <a href="https://github.com/kristenbartel" target="_blank" rel="noopener noreferrer" id="details-button" class="details-button btn btn-info mt-1 float-end"><i class="fab fa-github fa-lg"></i></a>
       </div>
     </div>
     <div class="card">
-      <img src="./image-assets/img_avatar.jpeg" class="card-img-top" alt="...">
+      <img src="/image-assets/eugene.jpg" class="card-img-top p-2" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Kristen</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h1 class="card-title">Eugene-</h1>
+        <h5>Full Stack Developer</h5>
+        <p class="card-text">Eugene made the initial project pitch to the team. He then further conceptualized, researched API viability, built javaScript functionality and features - focusing on DOM manipulation, and assisted with  design and styling. </p>
+        <a href="https://github.com/EugeneJac3" target="_blank" rel="noopener noreferrer" id="details-button" class="details-button btn btn-info mt-1 float-end"><i class="fab fa-github fa-lg"></i></a>
       </div>
     </div>
     <div class="card">
-      <img src="./image-assets/img_avatar.jpeg" class="card-img-top" alt="...">
+      <img src="/image-assets/Magic.JPG" class="card-img-top p-2" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Yvonne</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h1 class="card-title">Yvonne-</h1>
+        <h5>Full Stack Developer</h5>
+        <p class="card-text">Yvonne assisted with project conceptualization, researched open-source image assets and took the lead in developing an "About Us" page, where she and the team ensured design standards were carried through.</p>
+        <a href="https://github.com/YvonneOZertuche" target="_blank" rel="noopener noreferrer" id="details-button" class="details-button btn btn-info mt-1 float-end"><i class="fab fa-github fa-lg"></i></a>
       </div>
     </div>
   </div>
-  
-
-<!-- about-cards -->
-    <div class="row row-cols-sm-1 row-cols-md-3 row-cols-xl-4 searchResults" id="searchResults"></div>
 <!-- footer -->
     <div class="footer" id="footer">
         <i class="fa fa-bicycle" aria-hidden="true"></i>
     </div>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpxk5yKoAcrMtrTsda23tLvqIZ4RAJCZk&libraries=places"></script>
     <script type="module" src="/scripts/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -26,10 +26,10 @@
 }
 a:hover {
     color: #5bc0de;
-  }
+}
  a:active{
     color: #f0ad4e;
- }
+}
 a{
     text-decoration: none;
     color: white;
@@ -114,13 +114,12 @@ iframe {
     box-shadow:0px 20px 50px;
 }
 p {
-position: relative;
-text-decoration:none;
-font-family: 'Poppins', sans-serif;
-color: black;
-font-size: 14px;
-letter-spacing: 0.5px;
-padding: 0 10px;
+    position: relative;
+    font-family: 'Cantarell', sans-serif;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
 }
 p:after{
     content:"";
@@ -138,10 +137,8 @@ p:hover:after{
 .card-body{
     font-family: 'Cantarell', sans-serif;
 }
-h5 {
-    font-family: 'Cantarell', sans-serif;
+h1 {
     font-family: 'Permanent Marker', cursive;
-    font-size: x-large;
 }
 .card-img-top {
     width: 100%;
@@ -157,6 +154,31 @@ h5 {
     background-color: #f0ad4e;
     color: white;
 } 
+/* ---------about us--------------- */
+h5 {
+    font-family: 'Permanent Marker', cursive;
+}
+.about-us-container{
+    
+}
+.about-us-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    font-size: xx-large
+
+
+}
+.about-us-p{
+    display: flex;
+    justify-content: center;
+    text-justify: inter-cluster;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    margin-left: 5em;
+    margin-right: 5em;
+
+}
 /* --------------footer--------------- */
 .footer {
     display: flex;
@@ -172,7 +194,7 @@ h5 {
     z-index: 3;
     font-family: 'Cantarell', sans-serif;
 }
-/* styling for media queries */
+/* ------styling for media queries------ */
 @media only screen and  (max-width: 920px) {
     .btn-info {
         border: none;
@@ -258,10 +280,7 @@ h5 {
     }
     #mapsButton {
     }
-
-
 }
-
 @media only screen and  (max-width: 680px) {
     .btn-info {
         border: none;
