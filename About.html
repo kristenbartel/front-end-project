@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cantarell&family=Cormorant:wght@700&family=Dongle&family=Genos:wght@200&family=Lobster&family=Monoton&family=Montserrat+Alternates:wght@600&family=Parisienne&family=Permanent+Marker&family=Righteous&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">  
     <title>MTB app: name</title>
+    <!-- <script>import keys from '/scripts/API.js';</script> -->
   </head>
   <body>
 <!-- nav bar and header -->
@@ -17,51 +18,48 @@
             <img src="image-assets/shred-lightly-logo.jpg" alt="" class="logo" id="logo">
           <ul class="nav-bar-menu">
             <li id="nav-bar-item-shred" class="nav-bar-item">Shred Lightly</li>
-            <li id="nav-bar-item" class="nav-bar-item"><a href="#">Trail Search</a></li>
+            <li id="nav-bar-item" class="nav-bar-item"><a href="./index.html">Trail Search</a></li>
             <li id="nav-bar-item" class="nav-bar-item"><a href="./About.html">About Us</a></li>
             <li id="nav-bar-item" class="nav-bar-item"><a href="https://github.com/kristenbartel/front-end-project" target="_blank" rel="noopener noreferrer">The Code</a></li>
           </ul>
         </div>
-<!--search field -->
-<div class="input-group" id="input-group">
-        <input id="userInput" value="" type="text" class="form-control" placeholder="Enter City" aria-label="Search" aria-describedby="search-addon"/>
-        <button id="searchButton" href="#searchResult" type="button" class="input-button btn btn-info" onkeypress="myFunction()">
-            <i class="fas fa-search white"></i>
-        </button>
-</div>
-<!--Bootstrap spinner-->
-<div class="spinner-container" id="spinner-container">
-    <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-             <span class="visually-hidden"></span>
-        </div>
-    </div>
-</div>
-<!-- carousel -->
-    <div id="carousel" class="carousel" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="image-assets/car-1.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="image-assets/car-3.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="image-assets/car-4.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="image-assets/car-5.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
+<!-- about us cards -->
+
+  <div class="card-group">
+    <div class="card">
+      <img src="./image-assets/img_avatar.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Eugene</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
-<!-- map -->
-    <div class="map-container" id="map-container"> </div>
-<!-- cards -->
+    </div>
+    <div class="card">
+      <img src="./image-assets/img_avatar.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Kristen</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./image-assets/img_avatar.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Yvonne</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- about-cards -->
     <div class="row row-cols-sm-1 row-cols-md-3 row-cols-xl-4 searchResults" id="searchResults"></div>
 <!-- footer -->
     <div class="footer" id="footer">
         <i class="fa fa-bicycle" aria-hidden="true"></i>
     </div>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpxk5yKoAcrMtrTsda23tLvqIZ4RAJCZk&libraries=places"></script>
     <script type="module" src="/scripts/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

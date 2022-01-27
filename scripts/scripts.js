@@ -6,7 +6,7 @@ let searchButton = document.getElementById('searchButton');
 let searchResults = document.getElementById('searchResults');
 let spinnerContainer = document.getElementById('spinner-container');
 let mapsContainer = document.getElementById('maps-container');
-// 
+
 function initialize() {
   var options = {
     types: ['(cities)'],
@@ -14,15 +14,13 @@ function initialize() {
       country: "us"
     }
   };
-
   var input = document.getElementById('userInput');
   var autocomplete = new google.maps.places.Autocomplete(input, options);
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 initialize();
 
-
-// event listeners for button click
+// ------------eventListeners------------
 searchButton.addEventListener('click', (e) => {
     e.preventDefault();
       runSearch();
@@ -36,9 +34,7 @@ userInput.addEventListener('keyup', (e) => {
     }
 })
 
-
-// program
-
+//--------------- program --------------
 function runSearch () {
     spinnerContainer.style.display = "block"
 

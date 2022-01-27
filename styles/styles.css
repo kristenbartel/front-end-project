@@ -1,4 +1,3 @@
-
 .container-fluid{
     display: flex;
     justify-content: flex-start;
@@ -9,10 +8,8 @@
     max-height: 90px;
     z-index: 3;
 }
-
 .nav-bar-menu {
     display: flex;
-    /* justify-content: space-evenly; */
 }
 #nav-bar-item {
     display: flex;
@@ -25,14 +22,7 @@
     display: flex;
     margin-top: 1rem;
     color: white;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
     font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
 }
 a:hover {
     color: #5bc0de;
@@ -120,11 +110,9 @@ iframe {
     box-shadow: 0px 4px 10px grey;
     transition: all 300ms ease-in-out;
 }
-
 .card:hover{
     box-shadow:0px 20px 50px;
 }
-
 p {
 position: relative;
 text-decoration:none;
@@ -134,7 +122,6 @@ font-size: 14px;
 letter-spacing: 0.5px;
 padding: 0 10px;
 }
-
 p:after{
     content:"";
     position: absolute;
@@ -145,14 +132,11 @@ p:after{
     bottom: -10px;
     transition: 0.5s;
 }
-
 p:hover:after{
     width: 100%;
 }
-
 .card-body{
     font-family: 'Cantarell', sans-serif;
-    /* text-align: center; */
 }
 h5 {
     font-family: 'Cantarell', sans-serif;
@@ -162,6 +146,7 @@ h5 {
 .card-img-top {
     width: 100%;
     height: 25vw;
+    margin-top: 1em;
     object-fit: cover;
 }
 #details-button:hover{
@@ -263,20 +248,10 @@ h5 {
         display: flex;
         margin-top: 2rem;
         color: white;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Lobster', cursive; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
-    /* font-family: 'Parisienne', cursive; */
     font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
     }
     #nav-bar-item {
         display: flex;
-        /* padding: 1rem; */
         margin-top: 7%;
         font-size: x-small;
         font-family: 'Cantarell', sans-serif;
@@ -317,16 +292,7 @@ h5 {
         display: flex;
         margin-top: 2rem;
         color: white;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Lobster', cursive; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
-    /* font-family: 'Parisienne', cursive; */
     font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
     }
     #nav-bar-item {
         display: flex;
@@ -334,7 +300,6 @@ h5 {
         font-size: x-small;
         font-family: 'Cantarell', sans-serif;
     }
-    #mapsButton {
-    }
 }
+
 
