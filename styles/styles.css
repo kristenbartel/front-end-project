@@ -158,9 +158,6 @@ h1 {
 h5 {
     font-family: 'Permanent Marker', cursive;
 }
-.about-us-container{
-    
-}
 .about-us-title{
     display: flex;
     justify-content: center;
@@ -170,12 +167,10 @@ h5 {
 .about-us-p{
     display: flex;
     justify-content: center;
-    text-justify: inter-cluster;
     margin-top: 2em;
     margin-bottom: 3em;
     margin-left: 5em;
     margin-right: 5em;
-
 }
 /* --------------footer--------------- */
 .footer {
@@ -275,9 +270,6 @@ h5 {
         margin-top: 7%;
         font-size: x-small;
         font-family: 'Cantarell', sans-serif;
-    }
-    #mapsButton {
-    }
 }
 @media only screen and  (max-width: 680px) {
     .btn-info {
@@ -318,5 +310,3 @@ h5 {
         font-family: 'Cantarell', sans-serif;
     }
 }
-
-
