@@ -123,8 +123,6 @@ iframe {
 
 .card:hover{
     box-shadow:0px 20px 50px;
-    
-
 }
 
 p {
@@ -152,7 +150,6 @@ p:hover:after{
     width: 100%;
 }
 
-   
 .card-body{
     font-family: 'Cantarell', sans-serif;
     /* text-align: center; */
@@ -210,7 +207,7 @@ h5 {
     }
     .card {
         border-radius: 0;
-        margin: 5px;
+        margin: 20px;
         padding: 5px;
         
     }
@@ -247,8 +244,16 @@ h5 {
         font-size: small;
         font-family: 'Cantarell', sans-serif;
     }
+<<<<<<< HEAD
     #mapsButton {
         line-height: 36px;
+=======
+    .maps-button{
+        padding: 0;
+    }
+    .details-button {
+        padding: 0;
+>>>>>>> 41ec96833c9ca1bbdc5cfecfdf746c1fc601c35f
     }
 }
 @media only screen and  (max-width: 480px) {
@@ -302,6 +307,8 @@ h5 {
     }
     #mapsButton {
     }
+
+
 }
 
 @media only screen and  (max-width: 680px) {
@@ -354,3 +361,4 @@ h5 {
     #mapsButton {
     }
 }
+
