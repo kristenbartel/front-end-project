@@ -1,4 +1,3 @@
-
 .container-fluid{
     display: flex;
     justify-content: flex-start;
@@ -11,7 +10,6 @@
 }
 .nav-bar-menu {
     display: flex;
-    /* justify-content: space-evenly; */
 }
 #nav-bar-item {
     display: flex;
@@ -24,21 +22,14 @@
     display: flex;
     margin-top: 1rem;
     color: white;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
     font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
 }
 a:hover{
     color: #5bc0de;
-  }
+}
  a:active{
     color: #f0ad4e;
- }
+}
 a{
     text-decoration: none;
     color: white;
@@ -122,21 +113,13 @@ iframe {
 .card:hover{
     box-shadow:0px 20px 50px;
 }
-.cards{
-    margin: 1em;
-    border: none;
-    border-radius: 0;
-    box-shadow: 0px 4px 10px grey;
-    transition: all 300ms ease-in-out;
-}
 p {
-position: relative;
-text-decoration:none;
-font-family: 'Poppins', sans-serif;
-color: black;
-font-size: 14px;
-letter-spacing: 0.5px;
-padding: 0 10px;
+    position: relative;
+    font-family: 'Cantarell', sans-serif;
+    color: black;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
 }
 p:after{
     content:"";
@@ -153,7 +136,6 @@ p:hover:after{
 }
 .card-body{
     font-family: 'Cantarell', sans-serif;
-    /* text-align: center; */
 }
 .card-text{
     font-family: 'Cantarell', sans-serif;
@@ -166,15 +148,13 @@ h5 {
     /* font-family: 'Genos', sans-serif; */
     /* font-family: 'Monoton', cursive; */
     /* font-family: 'Montserrat Alternates', sans-serif; */
+h1 {
     font-family: 'Permanent Marker', cursive;
-    font-size: x-large;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
-    /* text-align: center; */
 }
 .card-img-top {
     width: 100%;
     height: 25vw;
+    margin-top: 1em;
     object-fit: cover;
 }
 #details-button:hover{
@@ -185,7 +165,31 @@ h5 {
     background-color: #f0ad4e;
     color: white;
 } 
+/* ---------about us--------------- */
+h5 {
+    font-family: 'Permanent Marker', cursive;
+}
+.about-us-container{
+    
+}
+.about-us-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    font-size: xx-large
 
+
+}
+.about-us-p{
+    display: flex;
+    justify-content: center;
+    text-justify: inter-cluster;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    margin-left: 5em;
+    margin-right: 5em;
+
+}
 /* --------------footer--------------- */
 .footer {
     display: flex;
@@ -201,8 +205,7 @@ h5 {
     z-index: 3;
     font-family: 'Cantarell', sans-serif;
 }
-
-/* styling for media queries */
+/* ------styling for media queries------ */
 @media only screen and  (max-width: 920px) {
     .btn-info {
         border: none;
@@ -212,10 +215,10 @@ h5 {
     }
     .card {
         border-radius: 0;
+        margin: 15px;
         margin: 20px;
 
         padding: 5px;
-        
     }
     .container-fluid {
         display: flex;
@@ -232,16 +235,7 @@ h5 {
         display: flex;
         margin-top: 1rem;
         color: white;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Lobster', cursive; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
-    /* font-family: 'Parisienne', cursive; */
-    font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
+        font-family: 'Permanent Marker', cursive;
     }
     #nav-bar-item {
         display: flex;
@@ -281,37 +275,24 @@ h5 {
     }
     .logo {
         max-height: 50px;
-    margin-top: 20px;
+        margin-top: 20px;
     }
     #nav-bar-item-shred{
         font-size: 1em;
         display: flex;
         margin-top: 2rem;
         color: white;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Lobster', cursive; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
-    /* font-family: 'Parisienne', cursive; */
     font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
     }
     #nav-bar-item {
         display: flex;
-        /* padding: 1rem; */
         margin-top: 7%;
         font-size: x-small;
         font-family: 'Cantarell', sans-serif;
     }
     #mapsButton {
     }
-
-
 }
-
 @media only screen and  (max-width: 680px) {
     .btn-info {
         border: none;
@@ -342,16 +323,7 @@ h5 {
         display: flex;
         margin-top: 2rem;
         color: white;
-    /* font-family: 'Cantarell', sans-serif; */
-    /* font-family: 'Dongle', sans-serif; */
-    /* font-family: 'Genos', sans-serif; */
-    /* font-family: 'Lobster', cursive; */
-    /* font-family: 'Monoton', cursive; */
-    /* font-family: 'Montserrat Alternates', sans-serif; */
-    /* font-family: 'Parisienne', cursive; */
     font-family: 'Permanent Marker', cursive;
-    /* font-family: 'Righteous', cursive; */
-    /* font-family: 'Syncopate', sans-serif;  */
     }
     #nav-bar-item {
         display: flex;
@@ -359,7 +331,6 @@ h5 {
         font-size: x-small;
         font-family: 'Cantarell', sans-serif;
     }
-    #mapsButton {
-    }
 }
+
 
