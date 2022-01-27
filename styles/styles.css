@@ -244,16 +244,11 @@ h5 {
         font-size: small;
         font-family: 'Cantarell', sans-serif;
     }
-<<<<<<< HEAD
-    #mapsButton {
-        line-height: 36px;
-=======
     .maps-button{
         padding: 0;
     }
     .details-button {
         padding: 0;
->>>>>>> 41ec96833c9ca1bbdc5cfecfdf746c1fc601c35f
     }
 }
 @media only screen and  (max-width: 480px) {
