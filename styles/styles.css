@@ -271,6 +271,7 @@ h5 {
         font-size: x-small;
         font-family: 'Cantarell', sans-serif;
 }
+}
 @media only screen and  (max-width: 680px) {
     .btn-info {
         border: none;
