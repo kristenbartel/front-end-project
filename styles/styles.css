@@ -270,9 +270,6 @@ h5 {
         margin-top: 7%;
         font-size: x-small;
         font-family: 'Cantarell', sans-serif;
-    }
-    #mapsButton {
-    }
 }
 @media only screen and  (max-width: 680px) {
     .btn-info {
@@ -313,5 +310,3 @@ h5 {
         font-family: 'Cantarell', sans-serif;
     }
 }
-
-
